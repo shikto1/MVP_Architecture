@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Validating...");
         progressDialog.setCancelable(false);
-        initiateViews();
+        presenter = new MainAcitvityPresenterlmpl(this, new MainActivityInteractorlmpl());
     }
 
     @Override
@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
         passwordEt = findViewById(R.id.passwordEt);
         validateButton = findViewById(R.id.validateButton);
         validateButton.setOnClickListener(this);
-        presenter = new MainAcitvityPresenterlmpl(this, new MainActivityInteractorlmpl());
     }
 
     @Override

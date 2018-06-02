@@ -13,6 +13,7 @@ public class MainAcitvityPresenterlmpl implements MainActivityContract.Presenter
     public MainAcitvityPresenterlmpl(MainActivityContract.MainView view, MainActivityContract.MainViewInterector interector) {
         this.view = view;
         this.interector = interector;
+        this.view.initiateViews();
     }
 
     @Override
